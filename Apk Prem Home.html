@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko APK Premium</title>
+    <link rel="stylesheet" href="Home.css">
+    <style>
+        body {
+            background-image: url("Bow Blue.png"); /* Ganti dengan URL gambar Anda */
+            background-size: cover; /* Gambar menutupi seluruh area */
+            background-repeat: repeat; /* Gambar tidak diulang */
+            background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+            background-color: #f0f0f0; /* Warna abu-abu muda sebagai fallback */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .struk-container {
+            background-color: #ffffff; /* Warna putih untuk wadah struk */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan tipis */
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toko APK Premium</h1>
+        <nav>
+            <ul>
+                <li><a href="Apk Prem Home.html">Beranda</a></li>
+                <li><a href="Apk Prem Keranjang.html" id="cart-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M9 2C9.55 2 10 2.45 10 3V4H14V3C14 2.45 14.45 2 15 2H17C17.55 2 18 2.45 18 3V4H20C20.55 4 21 4.45 21 5V19C21 19.55 20.55 20 20 20H4C3.45 20 3 19.55 3 19V5C3 4.45 3.45 4 4 4H6V3C6 2.45 6.45 2 7 2H9M7 7V17H17V7H7M9 9H15V15H9V9Z" />
+                    </svg>
+                    Keranjang (<span id="cart-count">0</span>)
+                </a></li>
+                <li><a href="Apk Prem Struk.html">Struk Pembayaran</a></li>
+                <li><a href="Apk Prem Kontak.html">Kontak</a></li>
+                <li><a href="Apk prem register.html">Daftar</a></li>
+                <li><a href="Apk Prem Login.html">Masuk</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="featured-apps">
+            <h2>Aplikasi Unggulan</h2>
+            <div class="app-list">
+                <div class="app-card">
+                    <img src="Netflix.jpeg" alt="Netflix">
+                    <h3>Netflix</h3>
+                    <p>Aplikasi menonton film nyaman dan lengkap</p>
+                    <p>Harga: Rp 170.000/Bulan</p>
+                    <button class="add-to-cart" data-id="app1" data-name="Netflix" data-price="170000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="Spotify.jpeg" alt="Spotify">
+                    <h3>Spotify</h3>
+                    <p>Aplikasi mendengarkan musik yang amat digemari banyak orang</p>
+                    <p>Harga: Rp 39.000/3 Bulan</p>
+                    <button class="add-to-cart" data-id="app2" data-name="Spotify" data-price="39000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="canva.jpeg" alt="Canva">
+                    <h3>Canva</h3>
+                    <p>Aplikasi Desain yang dapat mempermudah penggunanya</p>
+                    <p>Harga: Rp 15.000/Bulan</p>
+                    <button class="add-to-cart" data-id="app3" data-name="Canva" data-price="15000">Tambah ke Keranjang</button>
+                </div>
+            </div>
+        </section>
+    
+        <section id="all-apps">
+            <h2>Semua Aplikasi</h2>
+            <div class="app-list">
+                <div class="app-card">
+                    <img src="Netflix.jpeg" alt="Netflix">
+                    <h3>Netflix</h3>
+                    <p>Aplikasi menonton film nyaman dan lengkap</p>
+                    <p>Harga: Rp 170.000/Bulan</p>
+                    <button class="add-to-cart" data-id="app1" data-name="Netflix" data-price="170000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="Spotify.jpeg" alt="Spotify">
+                    <h3>Spotify</h3>
+                    <p>Aplikasi mendengarkan musik yang amat digemari banyak orang</p>
+                    <p>Harga: Rp 39.000/3 Bulan</p>
+                    <button class="add-to-cart" data-id="app2" data-name="Spotify" data-price="39000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="canva.jpeg" alt="Canva">
+                    <h3>Canva</h3>
+                    <p>Aplikasi Desain yang dapat mempermudah penggunanya</p>
+                    <p>Harga: Rp 15.000/Bulan</p>
+                    <button class="add-to-cart" data-id="app3" data-name="Canva" data-price="15000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="Youtube.jpeg" alt="Youtube">
+                    <h3>Youtube</h3>
+                    <p>Aplikasi yang digunakan.</p>
+                    <p>Harga: Rp 18.000/Bulan</p>
+                    <button class="add-to-cart" data-id="appD" data-name="Youtube" data-price="18000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="Disney.jpeg" alt="Disney">
+                    <h3>Disney</h3>
+                    <p>Aplikasi resmi disney</p>
+                    <p>Harga: Rp 17.000/Bulan</p>
+                    <button class="add-to-cart" data-id="appE" data-name="Disney" data-price="17000">Tambah ke Keranjang</button>
+                </div>
+                <div class="app-card">
+                    <img src="CapCut.jpeg" alt="Capcut">
+                    <h3>Capcut </h3>
+                    <p>Aplikasi edit video dengan banyak efek</p>
+                    <p>Harga: Rp 45.000</p>
+                    <button class="add-to-cart" data-id="appE" data-name="Capcut" data-price="15000">Tambah ke Keranjang</button>
+                </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Toko APK Premium</p>
+    </footer>
+    
+    <script src="Home.js"></script>
+    </body>
+    </html>

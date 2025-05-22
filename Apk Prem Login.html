@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk Akun</title>
+    <link rel="stylesheet" href="register.css">
+    <style>
+        body {
+            background-image: url("Bow Blue.png"); /* Ganti dengan URL gambar Anda */
+            background-size: cover; /* Gambar menutupi seluruh area */
+            background-repeat: repeat; /* Gambar tidak diulang */
+            background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+            background-color: #f0f0f0; /* Warna abu-abu muda sebagai fallback */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .struk-container {
+            background-color: #ffffff; /* Warna putih untuk wadah struk */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan tipis */
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Masuk Akun</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Kata Sandi:</label>
+                <input type="password" id="password" name="password" required>
+                <small class="error-message" id="passwordError"></small>
+            </div>
+            <button type="submit">Masuk</button>
+            <p class="register-link">Belum punya akun? <a href="Apk prem register.html">Daftar di sini</a></p>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

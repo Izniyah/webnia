@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contoh Keranjang Belanja</title>
+</head>
+<body>
+
+  <h2>Produk</h2>
+  <button onclick="tambahKeKeranjang('Buku')">Tambah Buku ke Keranjang</button>
+  <button onclick="tambahKeKeranjang('Pensil')">Tambah Pensil ke Keranjang</button>
+  <button onclick="tambahKeKeranjang('Pulpen')">Tambah Pulpen ke Keranjang</button>
+
+  <h2>Keranjang Belanja Anda</h2>
+  <ul id="daftar-keranjang">
+    </ul>
+
+  <script>
+    let keranjang = [];
+    const daftarKeranjang = document.getElementById('daftar-keranjang');
+
+    function tambahKeKeranjang(namaProduk) {
+      keranjang.push(namaProduk);
+      perbaruiTampilanKeranjang();
+    }
+
+    function perbaruiTampilanKeranjang() {
+      daftarKeranjang.innerHTML = ''; // Kosongkan tampilan sebelum memperbarui
+
+      keranjang.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        daftarKeranjang.appendChild(listItem);
+      });
+    }
+  </script>
+
+</body>
+</html>
+
+<header>
+        <div class="container">
+            <h1>Toko APK Premium</h1>
+            <nav>
+                <ul>
+                    <li><a href="Apk Prem Home.html">Beranda</a></li>
+                    <li><a href="Apk Prem Kategori.html">Kategori</a></li>
+                    <li><a href="cart.html" class="active">Keranjang (<span>0</span>)</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="Apk prem register.html">Daftar</a></li>
+                    <li><a href="register.html">Masuk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    /* ... CSS lainnya ... */
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #28a745; /* Warna hijau sukses */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1000; /* Pastikan notifikasi berada di atas elemen lain */
+        opacity: 0.9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }

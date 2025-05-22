@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struk Belanja Anda</title>
+    <link rel="stylesheet" href="Struk.css"> </head>
+    <style>
+        body {
+            background-image: url("Bow Blue.png"); /* Ganti dengan URL gambar Anda */
+            background-size: cover; /* Gambar menutupi seluruh area */
+            background-repeat: repeat; /* Gambar tidak diulang */
+            background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+            background-color: #f0f0f0; /* Warna abu-abu muda sebagai fallback */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .struk-container {
+            background-color: #ffffff; /* Warna putih untuk wadah struk */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan tipis */
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="receipt-header">
+                <p><strong>Tanggal Pesanan:</strong> <span id="orderDate"></span></p>
+                <p><strong>ID Pesanan:</strong> <span id="orderId"></span></p>
+            </div>
+            <div class="receipt-details">
+                <h2>Detail Produk</h2>
+                <table id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Produk</th>
+                            <th>Jumlah</th>
+                            <th>Harga Satuan</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+                <div class="summary">
+                    <p><strong>Total Pembelian:</strong> <span id="totalAmount"></span></p>
+                    <p><strong>Metode Pembayaran:</strong> <span id="paymentMethod"></span></p>
+                </div>
+            </div>
+            <div class="receipt-footer">
+                <p>Terima kasih telah berbelanja di toko kami!</p>
+                <button onclick="window.print()">Cetak Struk</button>
+                <button onclick="window.location.href='Apk Prem Home.html'">Kembali ke Beranda</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Toko APK Premium</p>
+    </footer>
+
+    <script src="Struk.js"></script>
+</body>
+</html>

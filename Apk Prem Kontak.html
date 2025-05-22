@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="Kontak.css">
+    <style>
+        body {
+            background-image: url("Bow Blue.png"); /* Ganti dengan URL gambar Anda */
+            background-size: cover; /* Gambar menutupi seluruh area */
+            background-repeat: repeat; /* Gambar tidak diulang */
+            background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+            background-color: #f0f0f0; /* Warna abu-abu muda sebagai fallback */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .struk-container {
+            background-color: #ffffff; /* Warna putih untuk wadah struk */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan tipis */
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kontak Kami</h1>
+        <nav>
+            <ul>
+                <li><a href="Apk Prem Home.html">Beranda</a></li>
+                <li><a href="Apk Prem Keranjang.html">Keranjang (<span id="cart-count">0</span>)</a></li>
+                <li><a href="Apk Prem Kategori.html">Kategori</a></li>
+                <li><a href="Apk Prem Kontak.html" class="active">Kontak</a></li> <li><a href="Apk prem register.html">Daftar</a></li>
+                <li><a href="Apk Prem Login.html">Masuk</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Kirim Pesan kepada Kami</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subjek:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan Anda:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" id="submitBtn">Kirim Pesan</button>
+                <p id="formMessage" class="message-status"></p>
+            </form>
+        </section>
+
+        <section class="info-section">
+            <div class="info-item">
+                <h3>Informasi Kontak</h3>
+                <p><strong>Alamat:</strong> Jl.Sunan Kalijaga. Kec. Gondanglegi</p>
+                <p><strong>Telepon:</strong> 62+82330717903</p>
+                <p><strong>Email:</strong> Fairus220122@gmail.com</p>
+                <p><strong>Jam Kerja:</strong> Senin - Jumat, 09:00 - 17:00 WIB</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Lokasi Kami</h3>
+                <div class="map-container">
+                    <iframe src="https://maps.app.goo.gl/n6ywg6iFRoVQvu54A" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Toko APK Premium</p>
+    </footer>
+
+    <script src="Kontak.js"></script>
+</body>
+</html>

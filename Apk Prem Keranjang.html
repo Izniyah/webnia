@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <link rel="stylesheet" href="Keranjang.css">
+    <style>
+        body {
+            background-image: url("Bow Blue.png"); /* Ganti dengan URL gambar Anda */
+            background-size: cover; /* Gambar menutupi seluruh area */
+            background-repeat: repeat; /* Gambar tidak diulang */
+            background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+            background-color: #f0f0f0; /* Warna abu-abu muda sebagai fallback */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .struk-container {
+            background-color: #ffffff; /* Warna putih untuk wadah struk */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan tipis */
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Keranjang Belanja</h1>
+        <nav>
+            <ul>
+                <li><a href="Apk Prem Home.html">Beranda</a></li>
+                <li><a href="Apk Prem Keranjang.html">Keranjang (<span id="cart-count">0</span>)</a></li>
+                <li><a href="Apk Prem Struk.html">Struk Pembayaran</a></li>
+                    <li><a href="Apk Prem Kontak.html">Kontak</a></li>
+                    <li><a href="Apk prem register.html">Daftar</a></li>
+                    <li><a href="Apk Prem Login.html">Masuk</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cart-items">
+            <h2>Item di Keranjang Anda</h2>
+            <ul id="cart-list">
+                <li id="empty-cart" style="display:none;">Keranjang Anda kosong.</li>
+            </ul>
+            <div id="cart-total" style="margin-top: 20px; font-weight: bold;">
+                Total: Rp 0
+            </div>
+            <button id="checkout-button" style="background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Toko APK Premium</p>
+    </footer>
+
+    <script src="Keranjang.js"></script>
+</body>
+</html>

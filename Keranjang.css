@@ -1,0 +1,250 @@
+/* Header untuk Halaman Keranjang */
+header {
+    background-color: #2c3e50; /* Warna header khusus untuk keranjang */
+    color: #fff;
+    padding: 1.5em 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky; /* Membuat header tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Navigasi di dalam Header Keranjang */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Membuat navigasi berada di tengah */
+    display: flex;
+    justify-content: center;
+    max-width: 1200px; /* Batas lebar maksimum navigasi */
+}
+
+nav ul li {
+    margin: 0 18px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7em 1.2em;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active { /* Contoh untuk menandai link yang aktif */
+    background-color: #c0392b; /* Warna hover lebih gelap */
+    color: #ecf0f1;
+}
+
+nav #cart-link {
+    position: relative;
+}
+
+nav #cart-count {
+    position: absolute;
+    top: -0.8em; /* Sesuaikan posisi badge */
+    right: -1em; /* Sesuaikan posisi badge */
+    background-color: #333; /* Warna badge yang berbeda */
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.4em 0.6em;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+nav #cart-link i { /* Style untuk ikon keranjang jika Anda menggunakannya */
+    margin-right: 0.5em;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+/* Responsive Design untuk Header Keranjang */
+@media (max-width: 768px) {
+    header {
+        padding: 1em 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 0.6em 1em;
+    }
+}
+main {
+    padding: 30px 20px;
+    max-width: 960px; /* Lebar maksimum halaman keranjang */
+    margin: 20px auto; /* Memberikan margin atas dan bawah */
+}
+
+#cart-items {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#cart-items h2 {
+    font-size: 2em;
+    color: #e74c3c; /* Warna aksen untuk judul keranjang */
+    margin-bottom: 1.5em;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 0.7em;
+    font-weight: 700;
+    text-align: center; /* Judul di tengah */
+}
+
+/* Daftar Item Keranjang */
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#cart-list li:last-child {
+    border-bottom: none;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.cart-item-info img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3em;
+}
+
+.item-price-quantity {
+    font-size: 0.95em;
+    color: #777;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.remove-item:hover {
+    color: #c0392b;
+}
+
+/* Total Harga */
+#cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+    text-align: right;
+    color: #333;
+}
+
+#cart-total span {
+    color: #27ae60; /* Warna hijau untuk total */
+}
+
+/* Tombol Checkout */
+#checkout-button {
+    background-color: #27ae60; /* Warna hijau untuk checkout */
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+    display: block; /* Membuat tombol menjadi blok agar lebar penuh */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#checkout-button:hover {
+    background-color: #219853;
+}
+
+/* Pesan Keranjang Kosong */
+#empty-cart {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    /* ... style footer Anda ... */
+    margin-top: 30px; /* Berikan jarak dari konten keranjang */
+}
+
+/* Responsive Design untuk Halaman Keranjang */
+@media (max-width: 600px) {
+    #cart-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item-info {
+        margin-bottom: 10px;
+    }
+
+    .remove-item {
+        margin-top: 10px;
+    }
+
+    #cart-total {
+        text-align: left;
+    }
+
+    #checkout-button {
+        font-size: 1em;
+        padding: 0.8em 1.5em;
+    }
+}

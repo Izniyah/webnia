@@ -1,0 +1,303 @@
+/* --- Global Body Styling --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak kolom agar header/footer tetap di posisi */
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* --- Header Styling (Konsisten dengan Keranjang) --- */
+header {
+    background-color: #e74c3c; /* Warna header khusus untuk keranjang */
+    color: #fff;
+    padding: 1.5em 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: sticky; /* Membuat header tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Navigasi di dalam Header */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Membuat navigasi berada di tengah */
+    display: flex;
+    justify-content: center;
+    max-width: 1200px; /* Batas lebar maksimum navigasi */
+}
+
+nav ul li {
+    margin: 0 18px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7em 1.2em;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #c0392b; /* Warna hover lebih gelap */
+    color: #ecf0f1;
+}
+
+/* --- Main Content Styling --- */
+main {
+    flex-grow: 1; /* Membuat main memenuhi sisa ruang vertikal */
+    padding: 30px 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    display: flex; /* Untuk memusatkan container */
+    justify-content: center;
+    align-items: flex-start; /* Sesuaikan alignment vertikal jika perlu */
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 700px; /* Lebar maksimal container struk */
+    box-sizing: border-box;
+}
+
+/* --- Receipt Specific Styling (Konsisten dengan Keranjang) --- */
+.receipt-header, .receipt-details, .summary, .receipt-footer {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd; /* Tetap dashed untuk tampilan struk */
+}
+
+.receipt-header p, .summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.receipt-header p strong, .summary p strong {
+    color: #555;
+}
+
+h2 {
+    color: #e74c3c; /* Warna aksen dari judul keranjang */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    font-weight: 700;
+    border-bottom: 2px solid #ddd; /* Garis bawah seperti judul keranjang */
+    padding-bottom: 10px;
+    text-align: center; /* Judul di tengah */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+table th {
+    background-color: #f8f8f8;
+    color: #666;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.summary p:last-child {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #27ae60; /* Warna hijau untuk total */
+}
+
+.receipt-footer {
+    text-align: center;
+    border-bottom: none;
+    padding-top: 20px;
+}
+
+.receipt-footer button {
+    background-color: #27ae60; /* Warna hijau seperti tombol checkout */
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin: 0 10px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.receipt-footer button:hover {
+    background-color: #219853;
+}
+
+.receipt-footer button:last-child {
+    background-color: #6c757d; /* Warna abu-abu untuk tombol kembali */
+}
+
+.receipt-footer button:last-child:hover {
+    background-color: #5a6268;
+}
+
+/* --- Footer Styling (Konsisten dengan Keranjang) --- */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 20px;
+    margin-top: auto; /* Mendorong footer ke bagian bawah halaman */
+}
+
+/* --- Responsive Design untuk Struk --- */
+@media (max-width: 768px) {
+    header {
+        padding: 1em 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 0.6em 1em;
+    }
+
+    .container {
+        padding: 20px 25px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .receipt-header p, .summary p {
+        font-size: 1em;
+    }
+
+    .receipt-footer button {
+        font-size: 1em;
+        padding: 0.8em 1.5em;
+        margin: 5px;
+    }
+}
+
+/* --- Print Styles --- */
+@media print {
+    body {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        display: block; /* Mengembalikan display ke blok untuk cetak */
+        width: 100%;
+        min-height: auto; /* Hapus min-height untuk cetak */
+        color: #000; /* Pastikan teks hitam */
+        font-size: 12pt; /* Ukuran font standar untuk cetak */
+    }
+
+    header, footer, nav {
+        display: none; /* Sembunyikan header, footer, dan navigasi saat mencetak */
+    }
+
+    main {
+        padding: 0; /* Hapus padding di main untuk cetak */
+        margin: 0;
+        display: block;
+    }
+
+    .container {
+        box-shadow: none; /* Hapus bayangan kotak */
+        border-radius: 0; /* Hapus border-radius */
+        max-width: 100%; /* Lebar penuh saat dicetak */
+        padding: 20px; /* Berikan padding yang cukup untuk konten */
+        background-color: #fff; /* Pastikan latar belakang putih */
+    }
+
+    h1 {
+        color: #000; /* Warna hitam untuk judul di cetak */
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24pt;
+    }
+
+    h2 {
+        color: #000; /* Warna hitam untuk sub-judul di cetak */
+        border-bottom: 1px solid #ccc; /* Garis bawah yang lebih sederhana */
+        padding-bottom: 8px;
+        font-size: 18pt;
+        text-align: left; /* Biarkan sub-judul rata kiri */
+    }
+
+    .receipt-header p, .summary p {
+        font-size: 11pt;
+        margin: 5px 0;
+    }
+
+    table {
+        border: 1px solid #ccc; /* Border tabel yang lebih jelas */
+    }
+
+    table th, table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        font-size: 10pt;
+    }
+
+    table th {
+        background-color: #f0f0f0; /* Latar belakang header tabel */
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f7f7f7; /* Warna baris genap sedikit berbeda */
+    }
+
+    .summary p:last-child {
+        color: #000; /* Pastikan total berwarna hitam di cetak */
+        font-size: 12pt;
+    }
+
+    .receipt-footer {
+        text-align: center;
+        padding-top: 15px;
+        border-top: 1px dashed #ccc; /* Garis footer yang sederhana */
+    }
+
+    .receipt-footer button {
+        display: none; /* Sembunyikan tombol saat mencetak */
+    }
+}
